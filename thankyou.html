@@ -14,25 +14,6 @@
         <div class="message">เป็นแฟนอย่างเป็นทางการแล้วโว้ยยยย 💖</div>
         <img src="https://cdn.pixabay.com/animation/2022/07/30/22/01/22-01-29-66_512.gif" alt="" width="200px">
     </div>
-    <div class="heart-container"></div>
-    <script>
-        const heartContainer = document.querySelector('.heart-container');
-
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.style.left = `${Math.random() * 100}vw`;
-            heart.style.animationDuration = `${Math.random() * 5 + 3}s`;
-            heart.style.opacity = Math.random();
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 8000);
-        }
-
-        setInterval(createHeart, 300);
-    </script>
 </body>
 
 </html>
