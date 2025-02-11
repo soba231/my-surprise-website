@@ -49,8 +49,8 @@ button {
 }
 
 .heart {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     background-color: red;
     position: absolute;
     bottom: -100px;
@@ -59,32 +59,34 @@ button {
     animation: float 5s infinite ease-in-out;
 }
 
-.heart::before, .heart::after {
+.heart::before,
+.heart::after {
     content: "";
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     background-color: red;
     border-radius: 50%;
     position: absolute;
 }
 
 .heart::before {
-    top: -25px;
+    top: -10px;
     left: 0;
 }
 
 .heart::after {
     top: 0;
-    left: -25px;
+    left: -10px;
 }
 
 @keyframes float {
     0% {
-        transform: translateX(-50%) rotate(45deg) translateY(0);
+        transform: translate(-50%, 0) rotate(45deg);
         opacity: 1;
     }
+
     100% {
-        transform: translateX(-50%) rotate(45deg) translateY(-100vh);
+        transform: translate(-50%, -100vh) rotate(45deg);
         opacity: 0;
     }
 }
